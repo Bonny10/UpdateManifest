@@ -14,7 +14,7 @@ class Manifest_update:
 		self.current_path = os.getcwd()
 		self.excel_path = os.path.join(self.current_path, self.file_name)
 		self.manifest_path = os.path.join(self.current_path, self.default_manifest_path)
-		self.clone = 'git clone https://github.com/Bonny10/manifest.git'
+		self.clone = 'git clone https://Bonny10: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@github.com/Bonny10/manifest.git'
 
 	def is_excel_available(self):
 		if (os.path.exists(self.excel_path)):
@@ -93,8 +93,7 @@ class Manifest_update:
 	# 	self.manifest_tree.parse.close()
 
 if __name__ == '__main__':
-	version = raw_input('Enter version which manifest need to be changed: ')
-	manifest = Manifest_update(version)
+	manifest = Manifest_update("v1.0")
 	manifest.is_excel_available()
 	manifest.is_manifest_available()
 	manifest.update_manifest()
